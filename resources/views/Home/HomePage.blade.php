@@ -28,8 +28,59 @@
                 <div class="py-5 justify-content-md-center">
                     <div class="container">
                         <div class="row">
-                            <div class="card">
-                                asda
+                            <div class="card p-0">
+                                <div class="card-header bg-primary">
+                                </div>
+                                <div class="card-body d-flex flex-column gap-3 border-0">
+                                    <div class="row">
+                                        <div class="form-group col-3">
+                                            <label class="form-label">Status Tidak Mampu</label>
+                                            <div>
+                                                <button class="btn btn-success rounded-3">Valid</button>
+                                            </div>
+                                        </div>
+                                        <div class="form-group col-3">
+                                            <label class="form-label">Status BPJS</label>
+                                            <div>
+                                                <button class="btn btn-danger rounded-3">Tidak Memiliki BPJS</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-6">
+                                            <label class="form-label">IDBDT</label>
+                                            <input class="form-control">
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <label class="form-label">IDARTBDT</label>
+                                            <input class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-7">
+                                            <label class="form-label">Nama Lengkap</label>
+                                            <input class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-5">
+                                            <label class="form-label">NIK</label>
+                                            <input class="form-control">
+                                        </div>
+                                        <div class="form-group col-5">
+                                            <label class="form-label">No. Kartu Keluarga</label>
+                                            <input class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-2">
+                                            <label class="form-label">Jumlah Bantuan</label>
+                                            <div>
+                                                <button class="btn btn-outline-info border-top-0 border-end-0 border-start-0 border-5">5 Bantuan</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

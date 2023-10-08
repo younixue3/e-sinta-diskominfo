@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
-    <title>Freedash Template - The Ultimate Multipurpose admin template</title>
+    <title>E-SINTA | @yield('title')</title>
     <!-- Custom CSS -->
     <link href="{{asset('assets/extra-libs/c3/c3.min.css')}}" rel="stylesheet">
     <link href="{{asset('assets/libs/chartist/dist/chartist.min.css')}}" rel="stylesheet">
