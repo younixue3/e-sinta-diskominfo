@@ -15931,8 +15931,8 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-/*============================================================== 
- For all pages 
+/*==============================================================
+ For all pages
  ============================================================== */
 #main-wrapper {
   width: 100%;
@@ -16022,7 +16022,7 @@ textarea.form-control-lg {
   transition: 0.2s ease-in;
 }
 #main-wrapper[data-layout=vertical][data-sidebartype=full] .page-wrapper {
-  margin-left: 260px;
+  margin-left: 0;
 }
 #main-wrapper[data-layout=vertical][data-sidebar-position=fixed] .topbar .top-navbar .navbar-header {
   position: fixed;

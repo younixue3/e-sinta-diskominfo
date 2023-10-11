@@ -1,4 +1,4 @@
-<header class="py-3 bg-secondary">
+<header class="py-3 bg-dark">
     <div class="container">
         <!-- Start Header -->
         <div class="header">
@@ -21,20 +21,22 @@
                     <ul class="navbar-nav ms-auto py-3 py-md-0">
                         <li class="nav-item pe-0 pe-md-3">
                             <a
-                                href="https://adminmart.com/product/freedash-bootstrap-5-admin-template/"
+                                href="{{route('home')}}"
                                 class="text-light"
-                                target="_blank"
                             >Home</a
                             >
                         </li>
-                        <li class="nav-item mt-3 mt-md-0">
-                            <a
-                                href="https://adminmart.com/product/modernize-bootstrap-5-admin-template/?ref=5"
-                                class="text-light"
-                                target="_blank"
-                            >About</a
-                            >
-                        </li>
+                        @if(auth()->user())
+                            @if(auth()->user()->is_super_admin)
+                                <li class="nav-item pe-0 pe-md-3">
+                                    <a
+                                        href="{{route('dashboard.index')}}"
+                                        class="text-light"
+                                    >Dashboard</a
+                                    >
+                                </li>
+                            @endif
+                        @endif
                     </ul>
                 </div>
             </nav>

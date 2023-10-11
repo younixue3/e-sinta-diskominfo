@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Front\Home;
+namespace App\Http\Controllers\Back\ART;
 
 use App\Http\Controllers\Controller;
+use App\Models\art;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Front\Home\DataHomeController as DataController;
+use App\Http\Controllers\Back\ART\DataARTController as DataController;
 
-class HomeController extends Controller
+class ARTController extends Controller
 {
 
     /**
@@ -24,9 +25,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $art = false;
-        $compact = compact('art');
-        return view('Home.HomePage', $compact);
+        $data = $this->data->get_data();
+        return view('Dashboard.ART.index', $data);
     }
 
     /**
@@ -48,16 +48,15 @@ class HomeController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Request $request)
+    public function show(art $art)
     {
-        $data = $this->data->get_data($request);
-        return view('Home.HomePage', $data);
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(art $art)
     {
         //
     }
@@ -65,7 +64,7 @@ class HomeController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, art $art)
     {
         //
     }
@@ -73,7 +72,7 @@ class HomeController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(art $art)
     {
         //
     }
