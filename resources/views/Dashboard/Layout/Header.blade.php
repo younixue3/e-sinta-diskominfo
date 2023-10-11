@@ -9,7 +9,7 @@
             <!-- ============================================================== -->
             <div class="navbar-brand">
                 <!-- Logo icon -->
-                <a href="{{route('dashboard.index')}}">
+                <a href="{{route('dashboard.art.index')}}">
                     E-SINTA
                 </a>
             </div>
@@ -209,10 +209,10 @@
         <!-- Sidebar navigation-->
         <nav class="sidebar-nav">
             <ul id="sidebarnav">
-                <li class="sidebar-item"> <a class="sidebar-link" href="{{route('dashboard.index')}}"
-                                             aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
-                            class="hide-menu">Dashboard</span></a></li>
-                <li class="list-divider"></li>
+{{--                <li class="sidebar-item"> <a class="sidebar-link" href="{{route('dashboard.index')}}"--}}
+{{--                                             aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span--}}
+{{--                            class="hide-menu">Dashboard</span></a></li>--}}
+{{--                <li class="list-divider"></li>--}}
                 <li class="nav-small-cap"><span class="hide-menu">Aplikasi</span></li>
 
                 <li class="sidebar-item"> <a class="sidebar-link" href="{{route('dashboard.art.index')}}"

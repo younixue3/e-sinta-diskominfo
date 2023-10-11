@@ -3,7 +3,7 @@
         <!-- Start Header -->
         <div class="header">
             <nav class="navbar navbar-expand-md navbar-dark px-0">
-                <a class="navbar-brand d-flex" href="index.html">
+                <a class="navbar-brand d-flex" href="{{route('home')}}">
                     E-SINTA
                 </a>
                 <button
@@ -30,7 +30,7 @@
                             @if(auth()->user()->is_super_admin)
                                 <li class="nav-item pe-0 pe-md-3">
                                     <a
-                                        href="{{route('dashboard.index')}}"
+                                        href="{{route('dashboard.art.index')}}"
                                         class="text-light"
                                     >Dashboard</a
                                     >

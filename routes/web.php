@@ -22,6 +22,6 @@ Route::get('/logout', function () {
 })->name('logout');
 
 Route::name('dashboard.')->prefix('dashboard')->middleware('auth')->group(function () {
-    Route::get('/', [\App\Http\Controllers\Back\Dashboard\DashboardController::class, 'index'])->name('index');
+//    Route::get('/', [\App\Http\Controllers\Back\Dashboard\DashboardController::class, 'index'])->name('index');
     Route::resource('art', \App\Http\Controllers\Back\ART\ARTController::class);
 });
