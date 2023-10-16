@@ -27,7 +27,7 @@
                         </div>
                     </div>
                 </div>
-                @if($art)
+                @if($art || $stunting)
                     <div class="py-5 justify-content-md-center">
                         <div class="container">
                             <div class="row">
@@ -35,64 +35,74 @@
                                     <div class="card-header bg-primary">
                                     </div>
                                     <div class="card-body d-flex flex-column gap-3 border-0">
-                                        <div class="row">
-                                            <div class="form-group col-3">
-                                                <label class="form-label">Status Tidak Mampu</label>
-                                                <div>
-                                                    @if($art->status_miskin)
-                                                        <button class="btn btn-success rounded-3">Miskin</button>
-                                                    @else
-                                                        <button class="btn btn-success rounded-3">Tidak Miskin</button>
-                                                    @endif
+                                        @if($art)
+                                            <div class="row">
+                                                <div class="form-group col-3">
+                                                    <label class="form-label">Status Tidak Mampu</label>
+                                                    <div>
+                                                        @if($art->status_miskin)
+                                                            <button class="btn btn-success rounded-3">Miskin</button>
+                                                        @else
+                                                            <button class="btn btn-success rounded-3">Tidak Miskin</button>
+                                                        @endif
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-3">
+                                                    <label class="form-label">Status BPJS</label>
+                                                    <div>
+                                                        @if($art->bpjs == 1)
+                                                            <button class="btn btn-primary">Memiliki BPJS</button>
+                                                        @elseif($art->bpjs == 2)
+                                                            <button class="btn btn-warning">Tidak Memiliki BPJS</button>
+                                                        @else
+                                                            <button class="btn btn-danger">NIK Tidak Valid</button>
+                                                        @endif
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="form-group col-3">
-                                                <label class="form-label">Status BPJS</label>
-                                                <div>
-                                                    @if($art->bpjs == 1)
-                                                        <button class="btn btn-primary">Memiliki BPJS</button>
-                                                    @elseif($art->bpjs == 2)
-                                                        <button class="btn btn-warning">Tidak Memiliki BPJS</button>
-                                                    @else
-                                                        <button class="btn btn-danger">NIK Tidak Valid</button>
-                                                    @endif
+                                            <div class="row">
+                                                <div class="form-group col-2">
+                                                    <label class="form-label">Jumlah Bantuan</label>
+                                                    <div>
+                                                        <button class="btn btn-outline-info border-top-0 border-end-0 border-start-0 border-5">{{$art->count_bantuan()}} Bantuan</button>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="form-group col-6">
-                                                <label class="form-label">IDBDT</label>
-                                                <input disabled class="form-control" value="{{$art->idbdt}}">
-                                            </div>
-                                            <div class="form-group col-6">
-                                                <label class="form-label">IDARTBDT</label>
-                                                <input disabled class="form-control" value="{{$art->idartbdt}}">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="form-group col-7">
-                                                <label class="form-label">Nama Lengkap</label>
-                                                <input disabled class="form-control" value="{{$art->nama}}">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="form-group col-5">
-                                                <label class="form-label">NIK</label>
-                                                <input disabled class="form-control" value="{{$art->nik}}">
-                                            </div>
-                                            <div class="form-group col-5">
-                                                <label class="form-label">No. Kartu Keluarga</label>
-                                                <input disabled class="form-control" value="{{$art->kk}}">
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="form-group col-2">
-                                                <label class="form-label">Jumlah Bantuan</label>
-                                                <div>
-                                                    <button class="btn btn-outline-info border-top-0 border-end-0 border-start-0 border-5">{{$art->count_bantuan()}} Bantuan</button>
+                                            <div class="row">
+                                                <div class="form-group col-7">
+                                                    <label class="form-label">Nama Lengkap</label>
+                                                    <input disabled class="form-control" value="{{$nama}}">
                                                 </div>
                                             </div>
-                                        </div>
+                                        @endif
+                                        @if($stunting)
+                                            <div class="row">
+                                                <div class="form-group col-2">
+                                                    <label class="form-label">Berat Badan</label>
+                                                    <div>
+                                                        <button class="btn btn-outline-info border-top-0 border-end-0 border-start-0 border-5">{{$stunting->bb_u}}</button>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-2">
+                                                    <label class="form-label">Tinggi Badan</label>
+                                                    <div>
+                                                        <button class="btn btn-outline-info border-top-0 border-end-0 border-start-0 border-5">{{$stunting->tb_u}}</button>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-2">
+                                                    <label class="form-label">Berat Badan dan Tinggi Badan</label>
+                                                    <div>
+                                                        <button class="btn btn-outline-info border-top-0 border-end-0 border-start-0 border-5">{{$stunting->bb_tb}}</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                <div class="row">
+                                                    <div class="form-group col-7">
+                                                        <label class="form-label">Nama Lengkap</label>
+                                                        <input disabled class="form-control" value="{{$nama}}">
+                                                    </div>
+                                                </div>
+                                        @endif
                                     </div>
                                 </div>
                             </div>
