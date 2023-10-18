@@ -5,15 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Stunting extends Model
+class Ajuan extends Model
 {
     use HasFactory;
-    protected $table = 'stunting';
+    protected $table = 'ajuan';
     protected $guarded = [];
-
-    public function ajuan()
-    {
-        return $this->hasMany(Ajuan::class);
-    }
-
 }

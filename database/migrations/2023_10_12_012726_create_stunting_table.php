@@ -15,13 +15,13 @@ return new class extends Migration
             $table->id();
             $table->string('nik', 25);
             $table->string('nama', 80);
-            $table->enum('jk', ['L', 'P']);
-            $table->date('ttl');
+            $table->string('jk', 8);
+            $table->text('ttl');
             $table->string('nama_orang_tua', 80);
             $table->string('posyandu', 80);
             $table->text('alamat');
             $table->text('usia_saat_ukur');
-            $table->date('tanggal_ukur');
+            $table->text('tanggal_ukur');
             $table->float('berat');
             $table->float('tinggi');
             $table->float('lila');
@@ -34,8 +34,8 @@ return new class extends Migration
             $table->enum('naik_berat_badan', ['N', 'T']);
             $table->float('pmt_diterima')->nullable(true);
             $table->integer('jml_vit_a')->nullable(true);
-            $table->string('KPSP', 5)->nullable(true);
-            $table->string('KIA', 5)->nullable(true);
+            $table->string('kpsp', 5)->nullable(true);
+            $table->string('kia', 5)->nullable(true);
             $table->timestamps();
         });
     }

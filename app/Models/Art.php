@@ -11,6 +11,7 @@ class Art extends Model
 {
     use HasFactory;
     protected $table = 'art';
+    protected $guarded = [];
 
     public function kategori_bantuan()
     {
@@ -20,6 +21,11 @@ class Art extends Model
     public function count_bantuan()
     {
         return $this->belongsTo(ArtBantuan::class, 'id', 'id_art')->count();
+    }
+
+    public function ajuan()
+    {
+        return $this->hasMany(Ajuan::class, 'id_art', 'id')->get();
     }
 
 }

@@ -23,10 +23,10 @@ class DatabaseSeeder extends Seeder
         ]);
 
         $this->call([
-            ArtSeeder::class,
-            BantuanSeeder::class,
-            ArtBantuanSeeder::class,
-            StuntingSeeder::class
+//            ArtSeeder::class,
+//            BantuanSeeder::class,
+//            ArtBantuanSeeder::class,
+//            StuntingSeeder::class
         ]);
     }
 }

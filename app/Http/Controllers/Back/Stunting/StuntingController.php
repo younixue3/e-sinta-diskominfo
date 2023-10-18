@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Front\Home;
+namespace App\Http\Controllers\Back\Stunting;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Front\Home\DataHomeController as DataController;
+use App\Http\Controllers\Back\Stunting\DataStuntingController as DataController;
 
-class HomeController extends Controller
+class StuntingController extends Controller
 {
 
     /**
@@ -24,10 +24,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $art = false;
-        $stunting = false;
-        $compact = compact('art', 'stunting');
-        return view('Home.HomePage', $compact);
+        $data = $this->data->get_data();
+        return view('Dashboard.Stunting.index', $data);
     }
 
     /**
@@ -49,16 +47,9 @@ class HomeController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Request $request)
+    public function show(string $id)
     {
-        $data = $this->data->get_data($request);
-        return view('Home.HomePage', $data);
-    }
-
-    public function ajuan(Request $request)
-    {
-        $data = $this->data->insert_ajuan($request);
-        return redirect(route('home'))->with('success', 'Update Data Successfully');
+        //
     }
 
     /**

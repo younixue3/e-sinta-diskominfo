@@ -35,6 +35,53 @@
                                     <div class="card-header bg-primary">
                                     </div>
                                     <div class="card-body d-flex flex-column gap-3 border-0">
+                                        <div class="row mb-4">
+                                            <div class="col-3">
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                        data-bs-target="#myModal">Ajuan</button>
+                                            </div>
+                                            <div id="myModal" class="modal fade" tabindex="-1" role="dialog"
+                                                 aria-labelledby="myModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h4 class="modal-title" id="myModalLabel">Ajuan</h4>
+                                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                                    aria-hidden="true"></button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <form id="ajuan" name="ajuan" action="{{route('ajuan')}}" method="POST" enctype="multipart/form-data">
+                                                                @csrf
+                                                                @method('POST')
+                                                                <div class="form-group">
+                                                                    <label class="form-label">KK</label>
+                                                                    <input type="file" class="form-control" name="kk">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="form-label">KTP</label>
+                                                                    <input type="file" class="form-control" name="ktp">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label class="form-label">Perihal Ajuan</label>
+                                                                    <textarea class="form-control" name="isi"></textarea>
+                                                                </div>
+                                                                @if($art)
+                                                                    <input type="hidden" name="art" value="{{$art->id}}">
+                                                                @endif
+                                                                @if($stunting)
+                                                                    <input type="hidden" name="stunting" value="{{$stunting->id}}">
+                                                                @endif
+                                                            </form>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-light"
+                                                                    data-bs-dismiss="modal">Close</button>
+                                                            <button type="submit" form="ajuan" class="btn btn-primary">Kirim</button>
+                                                        </div>
+                                                    </div><!-- /.modal-content -->
+                                                </div><!-- /.modal-dialog -->
+                                            </div><!-- /.modal -->
+                                        </div>
                                         @if($art)
                                             <div class="row">
                                                 <div class="form-group col-3">
@@ -64,7 +111,7 @@
                                                 <div class="form-group col-2">
                                                     <label class="form-label">Jumlah Bantuan</label>
                                                     <div>
-                                                        <button class="btn btn-outline-info border-top-0 border-end-0 border-start-0 border-5">{{$art->count_bantuan()}} Bantuan</button>
+                                                        <button class="btn btn-outline-info border-top-0 border-end-0 border-start-0 border-5">{{$art->bantuan}} Bantuan</button>
                                                     </div>
                                                 </div>
                                             </div>

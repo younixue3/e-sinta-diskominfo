@@ -220,6 +220,11 @@
                             class="hide-menu">ART
                                 </span></a>
                 </li>
+                <li class="sidebar-item"> <a class="sidebar-link" href="{{route('dashboard.stunting.index')}}"
+                                             aria-expanded="false"><i data-feather="database" class="feather-icon"></i><span
+                            class="hide-menu">Stunting
+                                </span></a>
+                </li>
             </ul>
         </nav>
         <!-- End Sidebar navigation -->

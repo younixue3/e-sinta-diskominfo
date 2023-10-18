@@ -66,5 +66,6 @@
 <script src="{{asset('assets/extra-libs/datatables.net/js/jquery.dataTables.min.js')}}"></script>
 <script src="{{asset('assets/extra-libs/datatables.net-bs4/js/dataTables.responsive.min.js')}}"></script>
 <script src="{{asset('js/pages/datatable/datatable-basic.init.js')}}"></script>
+<script src="https://kit.fontawesome.com/6fd3995802.js" crossorigin="anonymous"></script>
 
 </html>

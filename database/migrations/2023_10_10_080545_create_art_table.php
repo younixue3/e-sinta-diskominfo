@@ -21,6 +21,8 @@ return new class extends Migration
             // 1. Memiliki BPJS
             // 2. Tidak Memiliki BPJS
             // 3. NIK Tidak Valid
+            $table->integer('bantuan')->default(0);
+            $table->text('jenis_bantuan');
             $table->string('nik', 25);
             $table->string('kk', 25);
             $table->text('alamat');
