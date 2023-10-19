@@ -177,7 +177,7 @@
                                         </div>
                                         <div class="text-xs">
                                             Kasi Kesra dan Pemberdayaan Masyarakat
-                                            Kelurahan Dadi Multa
+                                            Kelurahan Dadi Mulya
                                         </div>
                                     </div>
                                 </div>
