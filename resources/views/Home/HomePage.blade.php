@@ -11,6 +11,7 @@
                             <h2 class="text-white">
                                 Cari Data
                                 <span class="fw-bold">Capil & Kelurahan</span>
+                                <div class="fs-4 w-75 m-auto">Dengan memasukkan NIK Anda, Anda akan mendapatkan informasi yang relevan mengenai status Anda dan bantuan yang mungkin Anda peroleh</div>
                                 <div class="nav-item mt-md-5">
                                     <a class="nav-link w-50 m-auto" href="javascript:void(0)">
                                         <form method="post" action="{{route('home.search')}}">
@@ -85,7 +86,7 @@
                                         @if($art)
                                             <div class="row">
                                                 <div class="form-group col-3">
-                                                    <label class="form-label">Status Tidak Mampu</label>
+                                                    <label class="form-label">Status Rumah Tangga</label>
                                                     <div>
                                                         @if($art->status_miskin)
                                                             <button class="btn btn-success rounded-3">Miskin</button>
@@ -200,23 +201,21 @@
                 </div>
                 <div class="container text-center">
                     <h2 class="mb-5">Tujuan & Manfaat</h2>
-                    <div class="d-flex gap-3 text-center">
-                        <div class="col-4 card border border-4 border-end-0 border-start-0 border-top-0 border-primary p-3">
-                            <h2>Jangka Pendek</h2>
+                    <div class="d-flex gap-5 text-center">
+                        <div class="col card border rounded-4 border-4 border-end-0 border-start-0 border-top-0 border-primary p-3">
+                            <div class="card-header"><div class="fs-2">Jangka Pendek</div></div>
                             <ul>
-                                <li>Menyajikan database lokal data keluarga miskin dan stunting yang akurat</li>
-                                <li>Menyajikan database lokal data keluarga miskin dan stunting yang akurat</li>
                                 <li>Menyajikan database lokal data keluarga miskin dan stunting yang akurat</li>
                             </ul>
                         </div>
-                        <div class="col-4 card border border-4 border-end-0 border-start-0 border-top-0 border-primary p-3">
-                            <h2>Jangka Panjang</h2>
+                        <div class="col card border rounded-4 border-4 border-end-0 border-start-0 border-top-0 border-primary p-3">
+                            <div class="card-header"><span class="fs-2">Jangka Panjang</span></div>
                             <ul>
                                 <li>Terwujudnya data yang akurat dalam upaya penanggulangan keluarga miskin dan stunting di Kelurahan Dadi Mulya Kecamatan Samarinda Ulu Kota Samarinda</li>
                             </ul>
                         </div>
-                        <div class="col-4 card border border-5 border-end-0 border-start-0 border-top-0 border-primary p-3">
-                            <h2 class="">Manfaat</h2>
+                        <div class="col card border rounded-4 border-5 border-end-0 border-start-0 border-top-0 border-primary p-3">
+                            <div class="card-header"><div class="fs-2">Manfaat</div></div>
                             <ul>
                                 <li>Mampu memberikan informasi terhadap data stunting dan kemiskinan melalui lintas stakeholder dalam upaya penanggulangan kemiskinan dan stunting, sehingga penurunan angka stunting dan kemiskinan dapat dikendalikan secara berkelanjutan</li>
                             </ul>
