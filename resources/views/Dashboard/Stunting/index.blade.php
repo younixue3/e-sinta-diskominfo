@@ -41,6 +41,7 @@
                                     <th>Jml Vit A</th>
                                     <th>KPSP</th>
                                     <th>KIA</th>
+                                    <th>Ajuan</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -48,6 +49,7 @@
                                     <tr>
                                         <td>{{$value->nik}}</td>
                                         <td>{{$value->nama}}</td>
+                                        <td>{{$value->jk}}</td>
                                         <td>{{$value->ttl}}</td>
                                         <td>{{$value->nama_orang_tua}}</td>
                                         <td>{{$value->posyandu}}</td>
@@ -68,6 +70,52 @@
                                         <td>{{$value->jml_vit_a}}</td>
                                         <td>{{$value->kpsp}}</td>
                                         <td>{{$value->kia}}</td>
+                                        <td>
+                                            @if($value->ajuan()->count())
+                                                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                                        data-bs-target="#ajuan{{$value->id}}"><i class="fas fa-comment me-1"></i><span class="bg-danger px-1 rounded-5">{{$value->ajuan()->count()}}</span></button>
+                                                <div id="ajuan{{$value->id}}" class="modal fade" tabindex="-1" role="dialog"
+                                                     aria-labelledby="myModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h4 class="modal-title" id="myModalLabel">Ajuan</h4>
+                                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                                        aria-hidden="true"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <div>
+                                                                    @csrf
+                                                                    @method('POST')
+                                                                    <div class="row">
+                                                                        <div class="form-group">
+                                                                            <label class="form-label">KK</label>
+                                                                            <img class="form-control w-75" src="{{asset('Upload/berkas_ajuan/'.$value->ajuan()->first()->kk)}}">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="form-group">
+                                                                            <label class="form-label">KTP</label>
+                                                                            <img class="form-control w-75" src="{{asset('Upload/berkas_ajuan/'.$value->ajuan()->first()->ktp)}}">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="form-group">
+                                                                            <label class="form-label">Isi</label>
+                                                                            <textarea class="form-control" disabled>{!! $value->ajuan()->first()->isi !!}</textarea>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-light"
+                                                                        data-bs-dismiss="modal">Close</button>
+                                                            </div>
+                                                        </div><!-- /.modal-content -->
+                                                    </div><!-- /.modal-dialog -->
+                                                </div><!-- /.modal -->
+                                            @endif
+                                        </td>
                                     </tr>
                                 @empty
                                     Data Kosong

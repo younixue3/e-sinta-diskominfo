@@ -14,4 +14,13 @@ class DataStuntingController extends Controller
         $compact = compact('stunting');
         return $compact;
     }
+
+    public function update_data($request, $id)
+    {
+        $id->lila = $request->lila;
+        $id->zs_bb_u = $request->zs_bb_u;
+        $id->zs_tb_u = $request->zs_tb_u;
+        $id->save();
+        $id->ajuan()->first()->delete();
+    }
 }

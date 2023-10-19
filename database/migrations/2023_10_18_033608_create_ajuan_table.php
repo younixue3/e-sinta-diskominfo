@@ -16,7 +16,7 @@ return new class extends Migration
             $table->unsignedBigInteger('id_art')->nullable();
             $table->foreign('id_art')->references('id')->on('art');
             $table->unsignedBigInteger('id_stunting')->nullable();
-            $table->foreign('id_stunting')->references('id')->on('bantuan');
+            $table->foreign('id_stunting')->references('id')->on('stunting');
             $table->text('isi');
             $table->text('kk');
             $table->text('ktp');

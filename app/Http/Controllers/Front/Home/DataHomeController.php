@@ -16,7 +16,7 @@ class DataHomeController extends Controller
     {
         $search = wordwrap($request->nik, 4, '.', true) . '.';
         $art = Art::query()->where('nik' ,$search)->first();
-        $stunting = Stunting::query()->where('nik', $search)->first();
+        $stunting = Stunting::query()->where('nik', $request->nik)->first();
         $implode = null;
         if ($art) {
             $explode = explode(' ', $art->nama);
@@ -65,7 +65,7 @@ class DataHomeController extends Controller
             $filename_kk = getFilename::getFilename($request->kk);
             Storage::disk('upload')->putFileAs('berkas_ajuan', $request->ktp, $filename_kk['filename']);
             $data = Ajuan::create([
-                'id_stunting' => $request->art,
+                'id_stunting' => $request->stunting,
                 'isi' => $request->isi,
                 'kk' => $filename_kk['filename'],
                 'ktp' => $filename_ktp['filename']

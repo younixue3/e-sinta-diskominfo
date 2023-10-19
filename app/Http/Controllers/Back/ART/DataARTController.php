@@ -14,4 +14,11 @@ class DataARTController extends Controller
         $compact = compact('art');
         return $compact;
     }
+
+    public function update_data($request, $id)
+    {
+        $id->status_miskin = $request->status_miskin;
+        $id->save();
+        $id->ajuan()->first()->delete();
+    }
 }

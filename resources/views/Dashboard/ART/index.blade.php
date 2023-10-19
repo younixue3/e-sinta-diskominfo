@@ -79,7 +79,7 @@
                                                                         aria-hidden="true"></button>
                                                             </div>
                                                             <div class="modal-body">
-                                                                <form id="art_import" name="art_import" action="{{route('dashboard.art_import')}}" method="POST" enctype="multipart/form-data">
+                                                                <div>
                                                                     @csrf
                                                                     @method('POST')
                                                                     <div class="row">
@@ -100,7 +100,7 @@
                                                                             <textarea class="form-control" disabled>{!! $value->ajuan()->first()->isi !!}</textarea>
                                                                         </div>
                                                                     </div>
-                                                                </form>
+                                                                </div>
                                                             </div>
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-light"
@@ -122,9 +122,9 @@
                                                                         aria-hidden="true"></button>
                                                             </div>
                                                             <div class="modal-body">
-                                                                <form id="art_import" name="art_import" action="{{route('dashboard.art_import')}}" method="POST" enctype="multipart/form-data">
+                                                                <form id="art_update" name="art_update" action="{{route('dashboard.art.update', $value->id)}}" method="POST" enctype="multipart/form-data">
                                                                     @csrf
-                                                                    @method('POST')
+                                                                    @method('PUT')
                                                                     <div class="row">
                                                                         <div class="form-group">
                                                                             <label class="form-label">NIK</label>
@@ -151,7 +151,7 @@
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-light"
                                                                         data-bs-dismiss="modal">Close</button>
-                                                                <button type="submit" form="art_import" class="btn btn-primary">Save changes</button>
+                                                                <button type="submit" form="art_update" class="btn btn-primary">Save changes</button>
                                                             </div>
                                                         </div><!-- /.modal-content -->
                                                     </div><!-- /.modal-dialog -->

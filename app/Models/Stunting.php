@@ -13,7 +13,7 @@ class Stunting extends Model
 
     public function ajuan()
     {
-        return $this->hasMany(Ajuan::class);
+        return $this->hasMany(Ajuan::class, 'id_stunting', 'id')->get();
     }
 
 }

@@ -66,7 +66,8 @@ class ARTController extends Controller
      */
     public function update(Request $request, art $art)
     {
-        //
+        $data = $this->data->update_data($request, $art);
+        return redirect(route('dashboard.art.index'))->with('success', 'Update Data Successfully');
     }
 
     /**
