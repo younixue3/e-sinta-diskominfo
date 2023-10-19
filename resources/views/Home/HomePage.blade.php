@@ -2,7 +2,7 @@
 @section('title', 'Home')
 @section('content')
     <div class="content-wrapper">
-        <section class="spacer bg-secondary-subtle">
+        <section class="m run buildbg-secondary-subtle">
             <div class="">
                 <div class="d-flex position-relative align-items-center justify-content-center">
                     <img alt="Hero Image" class="w-100 object-fit-cover" height="300" src="{{asset('assets/images/bg_hero.jpg')}}">
@@ -11,7 +11,7 @@
                             <h2 class="text-white">
                                 Cari Data
                                 <span class="fw-bold">Capil & Kelurahan</span>
-                                <div class="nav-item d-none d-md-block mt-5">
+                                <div class="nav-item mt-md-5">
                                     <a class="nav-link w-50 m-auto" href="javascript:void(0)">
                                         <form method="post" action="{{route('home.search')}}">
                                             @csrf
