@@ -10,7 +10,10 @@
             <div class="navbar-brand">
                 <!-- Logo icon -->
                 <a href="{{route('dashboard.art.index')}}">
-                    E-SINTA
+                    <div class="d-flex gap-3">
+                        <img class="m-auto" style="height: 50px" src="{{asset('img/Picture1.png')}}">
+                        <div class="m-auto">E-SINTA</div>
+                    </div>
                 </a>
             </div>
             <!-- ============================================================== -->

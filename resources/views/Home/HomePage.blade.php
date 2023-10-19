@@ -157,13 +157,43 @@
                     </div>
                 @endif
                 <div class="container">
+                    <div class="d-flex gap-3 text-center p-5">
+                        <div class="card w-100 text-center p-4">
+                            <div class="card-body">
+                                <div class="justify-content-center mb-4">
+                                    <img style="height: 80px;" src="{{asset('img/Picture1.png')}}">
+                                </div>
+                                <div class="row">
+                                    <h1 class="text-primary fw-bold">
+                                        E-SINTA
+                                    </h1>
+                                    <h3>
+                                        STUNTING DAN KEMISKINAN DALAM DATA
+                                    </h3>
+                                    <div>
+                                        Disusun Oleh:
+                                        <div class="fw-bold mt-2 text-primary">
+                                            Shinta Rizki Delvinda, S.Sos., M.Si
+                                        </div>
+                                        <div class="text-xs">
+                                            Kasi Kesra dan Pemberdayaan Masyarakat
+                                            Kelurahan Dadi Multa
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
                     <div class="d-flex gap-3 text-center pt-2 p-5">
                         <div class="card w-100 text-center p-5">
-                            <span class="text-2xl">Latar belakang</span>
-                            <h1 class="d-inline">E-SINTA</h1>
-                            <div class="mt-2 d-flex flex-column p-8 gap-2">
-                                <p>Kemiskinan adalah masalah serius yang dapat mempengaruhi akses keluarga terhadap layanan kesehatan, pendidikan, dan gizi yang baik. Stunting (keterlambatan pertumbuhan) pada anak-anak terkait erat dengan kondisi gizi yang buruk selama masa pertumbuhan awal. Stunting dapat memiliki dampak jangka panjang pada perkembangan fisik dan kognitif anak, serta produktivitas di masa depan. Selama ini masih belum ada data yang tersaji secara akurat dan tepat sasaran denganbaik, sehingga seringterjadi kendala atau         hambatan dalam keakuratan data terutama keluarga miskin dan stunting. Dalam pelaksanaan masih saja banyak ditemukan ketidaktepatan penerima yang seharusnya menjadi prioritas dan benar-benar membutuhkan kebutuhandasar mereka, terlebihlagi terhadap keluarga inti yang didalamnya terdapat anak stunting. Bercermin dari hal ini maka perlu adanya perubahan sistem pendataan guna menangani keluarga miskin dan stunting.</p>
-                                <p>Berkaitan dengan hal ini, maka keakuratan data terhadap warga miskin dan atau memang benar-benar membutuhkan sangat berpengaruh agar tepat sasaran dalam memenuhi kebutuhan dasar  mereka agar bisa terpenuhi gizi dan nutrisibagi keluarga inti mereka sebagaiupaya pencegahan dini stunting.</p>
+                            <div class="row">
+                                <h2 class="text-2xl">Latar belakang</h2>
+                                <div class="mt-2 d-flex flex-column p-8 gap-2">
+                                    <p>Kemiskinan adalah masalah serius yang dapat mempengaruhi akses keluarga terhadap layanan kesehatan, pendidikan, dan gizi yang baik. Stunting (keterlambatan pertumbuhan) pada anak-anak terkait erat dengan kondisi gizi yang buruk selama masa pertumbuhan awal. Stunting dapat memiliki dampak jangka panjang pada perkembangan fisik dan kognitif anak, serta produktivitas di masa depan. Selama ini masih belum ada data yang tersaji secara akurat dan tepat sasaran denganbaik, sehingga seringterjadi kendala atau         hambatan dalam keakuratan data terutama keluarga miskin dan stunting. Dalam pelaksanaan masih saja banyak ditemukan ketidaktepatan penerima yang seharusnya menjadi prioritas dan benar-benar membutuhkan kebutuhandasar mereka, terlebihlagi terhadap keluarga inti yang didalamnya terdapat anak stunting. Bercermin dari hal ini maka perlu adanya perubahan sistem pendataan guna menangani keluarga miskin dan stunting.</p>
+                                    <p>Berkaitan dengan hal ini, maka keakuratan data terhadap warga miskin dan atau memang benar-benar membutuhkan sangat berpengaruh agar tepat sasaran dalam memenuhi kebutuhan dasar  mereka agar bisa terpenuhi gizi dan nutrisibagi keluarga inti mereka sebagaiupaya pencegahan dini stunting.</p>
+                                </div>
                             </div>
                         </div>
                     </div>

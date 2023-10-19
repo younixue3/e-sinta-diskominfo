@@ -4,7 +4,10 @@
         <div class="header">
             <nav class="navbar navbar-expand-md navbar-dark px-0">
                 <a class="navbar-brand d-flex" href="{{route('home')}}">
-                    E-SINTA
+                    <div class="d-flex gap-2">
+                        <img class="m-auto" style="height: 50px" src="{{asset('img/Picture1.png')}}">
+                        <div class="m-auto">E-SINTA</div>
+                    </div>
                 </a>
                 <button
                     class="navbar-toggler"
