@@ -2,7 +2,7 @@
 @section('title', 'Home')
 @section('content')
     <div class="content-wrapper">
-        <section class="m run buildbg-secondary-subtle">
+        <section class="bg-secondary-subtle">
             <div class="">
                 <div class="d-flex position-relative align-items-center justify-content-center">
                     <img alt="Hero Image" class="w-100 object-fit-cover" height="300" src="{{asset('assets/images/bg_hero.jpg')}}">
