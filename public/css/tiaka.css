@@ -3,3 +3,23 @@
         margin-left: 260px;
     }
 }
+
+.card-hover:hover {
+    transform: scale(1.1);
+}
+
+.card-hover {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.search-bar {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.search-bar:hover {
+    transform: scale(1.1);
+}

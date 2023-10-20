@@ -11,15 +11,18 @@
                             <h2 class="text-white">
                                 Cari Data
                                 <span class="fw-bold">Capil & Kelurahan</span>
-                                <div class="fs-4 w-75 m-auto">Dengan memasukkan NIK Anda, Anda akan mendapatkan informasi yang relevan mengenai status Anda dan bantuan yang mungkin Anda peroleh</div>
+                                <div class="fs-4 w-md-75 m-auto mt-4 fs-6 fs-md-1">Dengan memasukkan NIK Anda, Anda akan mendapatkan informasi yang relevan mengenai status Anda dan bantuan yang mungkin Anda peroleh</div>
                                 <div class="nav-item mt-md-5">
-                                    <a class="nav-link w-50 m-auto" href="javascript:void(0)">
+                                    <a class="nav-link w-md-50 m-auto" href="javascript:void(0)">
                                         <form method="post" action="{{route('home.search')}}">
                                             @csrf
                                             @method('post')
-                                            <div class="customize-input">
-                                                <input name="nik" class="form-control custom-shadow custom-radius border-0 bg-white"
+                                            <div class="d-flex customize-input search-bar bg-white rounded-5">
+                                                <input name="nik" class="form-control bg-transparent rounded-5 border-0 bg-white py-2"
                                                        type="search" placeholder="Search" aria-label="Search">
+                                                <div>
+                                                    <button class="bg-transparent border-0 m-auto text-center px-2" type="submit"><i class="fas fa-search text-dark fs-3 m-auto"></i></button>
+                                                </div>
                                             </div>
                                         </form>
                                     </a>
@@ -158,11 +161,12 @@
                     </div>
                 @endif
                 <div class="container">
-                    <div class="d-flex gap-3 text-center p-5">
-                        <div class="card w-100 text-center p-4">
+                    <div class="d-flex gap-3 text-center p-md-5">
+                        <div class="card w-100 text-center p-md-4">
                             <div class="card-body">
-                                <div class="justify-content-center mb-4">
-                                    <img style="height: 80px;" src="{{asset('img/Picture1.png')}}">
+                                <div class="d-flex gap-2 justify-content-center mb-4">
+                                    <img style="height: 70px;" src="{{asset('img/Picture1.png')}}">
+                                    <img style="height: 70px;" src="{{asset('img/logo_peradaban.png')}}">
                                 </div>
                                 <div class="row">
                                     <h1 class="text-primary fw-bold">
@@ -176,7 +180,7 @@
                                         <div class="fw-bold mt-2 text-primary">
                                             Shinta Rizki Delvinda, S.Sos., M.Si
                                         </div>
-                                        <div class="text-xs">
+                                        <div class="fs-6">
                                             Kasi Kesra dan Pemberdayaan Masyarakat
                                             Kelurahan Dadi Mulya
                                         </div>
@@ -201,22 +205,24 @@
                 </div>
                 <div class="container text-center">
                     <h2 class="mb-5">Tujuan & Manfaat</h2>
-                    <div class="d-flex gap-5 text-center">
-                        <div class="col card border rounded-4 border-4 border-end-0 border-start-0 border-top-0 border-primary p-3">
-                            <div class="card-header"><div class="fs-2">Jangka Pendek</div></div>
-                            <ul>
-                                <li>Menyajikan database lokal data keluarga miskin dan stunting yang akurat</li>
-                            </ul>
-                        </div>
-                        <div class="col card border rounded-4 border-4 border-end-0 border-start-0 border-top-0 border-primary p-3">
-                            <div class="card-header"><span class="fs-2">Jangka Panjang</span></div>
-                            <ul>
+                    <div class="d-flex flex-column flex-md-row gap-8 text-center">
+                        <div class="col m-auto card card-hover border h-100 rounded-4 border-4 border-end-0 border-start-0 border-top-0 border-primary">
+                            <div class="card-header bg-primary text-white py-1"><div class="fs-3 fw-bold">Jangka Panjang</div></div>
+                            <ul class="p-3">
                                 <li>Terwujudnya data yang akurat dalam upaya penanggulangan keluarga miskin dan stunting di Kelurahan Dadi Mulya Kecamatan Samarinda Ulu Kota Samarinda</li>
                             </ul>
                         </div>
-                        <div class="col card border rounded-4 border-5 border-end-0 border-start-0 border-top-0 border-primary p-3">
-                            <div class="card-header"><div class="fs-2">Manfaat</div></div>
-                            <ul>
+                        <div class="col card border card-hover h-100 rounded-4 border-4 border-end-0 border-start-0 border-top-0 border-primary">
+                            <div class="card-header bg-primary text-white py-1"><div class="fs-3 fw-bold">Jangka Pendek</div></div>
+                            <ul class="p-3" style="list-style-type: disc;list-style-position: inside;">
+                                <li class="mb-3">Menyajikan database lokal data keluarga miskin dan stunting yang akurat</li>
+                                <li class="mb-3">Adanya peran kelurahan dalam membantu pengakurasian data keluarga miskin dan stunting tepat sasaran</li>
+                                <li class="mb-3">Memberikan pemahaman terhadap pentingnya data yang akurat</li>
+                            </ul>
+                        </div>
+                        <div class="col m-auto card card-hover border h-100 rounded-4 border-5 border-end-0 border-start-0 border-top-0 border-primary">
+                            <div class="card-header bg-primary text-white py-1"><div class="fs-3 fw-bold">Manfaat</div></div>
+                            <ul class="p-3">
                                 <li>Mampu memberikan informasi terhadap data stunting dan kemiskinan melalui lintas stakeholder dalam upaya penanggulangan kemiskinan dan stunting, sehingga penurunan angka stunting dan kemiskinan dapat dikendalikan secara berkelanjutan</li>
                             </ul>
                         </div>
