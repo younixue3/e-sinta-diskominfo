@@ -11,8 +11,8 @@
                             <h2 class="text-white">
                                 Cari Data
                                 <span class="fw-bold">Capil & Kelurahan</span>
-                                <div class=" w-50 w-md-75 m-auto mt-4 fs-4">Dengan memasukkan NIK Anda, Anda akan mendapatkan informasi yang relevan mengenai status Anda dan bantuan yang mungkin Anda peroleh</div>
-                                <div class="nav-item mt-md-5">
+                                <div class="w-100 w-md-75 m-auto mt-4 fs-5">Dengan memasukkan NIK Anda, Anda akan mendapatkan informasi yang relevan mengenai status Anda dan bantuan yang mungkin Anda peroleh</div>
+                                <div class="nav-item mt-3 mt-md-5">
                                     <a class="nav-link w-md-50 m-auto" href="javascript:void(0)">
                                         <form method="post" action="{{route('home.search')}}">
                                             @csrf
@@ -20,7 +20,7 @@
                                             <div class="d-flex customize-input search-bar bg-white rounded-5">
                                                 <input name="nik" class="form-control bg-transparent rounded-5 border-0 bg-white py-2"
                                                        type="search" placeholder="Search" aria-label="Search">
-                                                <div>
+                                                <div class="d-flex">
                                                     <button class="bg-transparent border-0 m-auto text-center px-2" type="submit"><i class="fas fa-search text-dark fs-3 m-auto"></i></button>
                                                 </div>
                                             </div>
