@@ -10,7 +10,7 @@
                         <div class="col-md-9 text-center">
                             <h2 class="text-white">
                                 Cari Data
-                                <span class="fw-bold">Capil & Kelurahan</span>
+                                <span class="fw-bold">Kemiskinan & Stunting</span>
                                 <div class="w-100 w-md-75 m-auto mt-4 fs-5">Dengan memasukkan NIK Anda, Anda akan mendapatkan informasi yang relevan mengenai status Anda dan bantuan yang mungkin Anda peroleh</div>
                                 <div class="nav-item mt-3 mt-md-5">
                                     <a class="nav-link w-md-50 m-auto" href="javascript:void(0)">
