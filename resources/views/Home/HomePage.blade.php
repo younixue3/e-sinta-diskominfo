@@ -191,8 +191,8 @@
                     </div>
                 </div>
                 <div class="container">
-                    <div class="d-flex gap-3 text-center pt-2 p-5">
-                        <div class="card w-100 text-center p-5">
+                    <div class="d-flex gap-3 text-center pt-2 p-md-5">
+                        <div class="card w-100 text-center pt-4 p-2 p-md-5">
                             <div class="row">
                                 <h2 class="text-2xl">Latar belakang</h2>
                                 <div class="mt-2 d-flex flex-column p-8 gap-2">
