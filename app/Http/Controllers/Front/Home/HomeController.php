@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Front\Home;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Front\Home\DataHomeController as DataController;
 
@@ -57,8 +58,15 @@ class HomeController extends Controller
 
     public function ajuan(Request $request)
     {
-        $data = $this->data->insert_ajuan($request);
-        return redirect(route('home'))->with('success', 'Update Data Successfully');
+        $validator = $request->validate([
+            'isi' => 'required',
+            'ktp' => 'required|file|size:512|mimes:png,jpg,jpeg',
+//            'kk' => 'required|file|size:512|mimes:png,jpg,jpeg',
+        ]);
+        dd();
+//        dd($validated);
+//        $data = $this->data->insert_ajuan($request);
+//        return redirect(route('home'))->with('success', 'Update Data Successfully');
     }
 
     /**

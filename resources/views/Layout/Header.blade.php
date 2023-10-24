@@ -29,6 +29,13 @@
                             >Home</a
                             >
                         </li>
+                        <li class="nav-item pe-0 pe-md-3">
+                            <a
+                                href="{{route('tentang')}}"
+                                class="text-light"
+                            >Tentang</a
+                            >
+                        </li>
                         @if(auth()->user())
                             @if(auth()->user()->is_super_admin)
                                 <li class="nav-item pe-0 pe-md-3">

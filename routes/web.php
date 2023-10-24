@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [App\Http\Controllers\Front\Home\HomeController::class, 'index'])->name('home');
+Route::get('/tentang', function () {
+    return view('About.AboutPage');
+})->name('tentang');
 Route::post('/ajuan', [App\Http\Controllers\Front\Home\HomeController::class, 'ajuan'])->name('ajuan');
 Route::post('/search', [App\Http\Controllers\Front\Home\HomeController::class, 'show'])->name('home.search');
 Auth::routes();
