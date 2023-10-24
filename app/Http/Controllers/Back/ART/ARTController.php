@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Back\ART;
 
 use App\Http\Controllers\Controller;
-use App\Models\art;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Back\ART\DataARTController as DataController;
 
