@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Front\Home;
 
 use App\Http\Controllers\Controller;
+use Validator;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Front\Home\DataHomeController as DataController;
@@ -58,15 +59,18 @@ class HomeController extends Controller
 
     public function ajuan(Request $request)
     {
-        $validator = $request->validate([
-            'isi' => 'required',
-            'ktp' => 'required|file|size:512|mimes:png,jpg,jpeg',
-//            'kk' => 'required|file|size:512|mimes:png,jpg,jpeg',
+
+        $validator = Validator::make($request->all(), [
+            'kk' => ['required', 'file', 'size:500', 'mimes:jpeg,jpg,webp,png', 'dimensions: max_width = 2464, max_height = 2464', 'max: 5000'],
+            'ktp' => ['required', 'file', 'size:500', 'mimes:jpeg,jpg,webp,png', 'dimensions: max_width = 2464, max_height = 2464', 'max: 5000'],
+            'isi' => ['required', 'max: 350'],
         ]);
-        dd();
-//        dd($validated);
-//        $data = $this->data->insert_ajuan($request);
-//        return redirect(route('home'))->with('success', 'Update Data Successfully');
+        if ($validator->fails()) {
+            return redirect(route('home'))->withErrors($validator);
+        } else {
+            $data = $this->data->insert_ajuan($request);
+            return redirect(route('home'))->with('success', 'Update Data Successfully');
+        }
     }
 
     /**

@@ -14,7 +14,7 @@
     <!-- Custom CSS -->
     <link href="{{asset('assets/extra-libs/c3/c3.min.css')}}" rel="stylesheet">
     <link href="{{asset('assets/libs/chartist/dist/chartist.min.css')}}" rel="stylesheet">
-    <link href="{{asset('assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css')}}" rel="stylesheet" />
+    <link href="{{asset('assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css')}}" rel="stylesheet"/>
     <!-- Custom CSS -->
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
     <link href="{{asset('css/tiaka.css')}}" rel="stylesheet">
@@ -31,6 +31,26 @@
     @include('Layout.Header')
     @yield('content')
     @include('Layout.Footer')
+    @if ($errors->any())
+    @endif
+    <div class="p-2" style="position: fixed; bottom: 0; right: 0;">
+        @foreach($errors->all() as $error)
+            <div class="toast fade show mb-3" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header">
+                    <svg class="bd-placeholder-img rounded me-2" width="20" height="20" xmlns="http://www.w3.org/2000/svg"
+                         aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <rect width="100%" height="100%" fill="red"></rect>
+                    </svg>
+                    <strong class="me-auto">Error</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"
+                            fdprocessedid="mlog2p"></button>
+                </div>
+                <div class="toast-body">
+                    {{$error}}
+                </div>
+            </div>
+        @endforeach
+    </div>
 </div>
 </body>
 
