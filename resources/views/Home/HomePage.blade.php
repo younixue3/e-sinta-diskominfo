@@ -6,8 +6,8 @@
             <div class="">
                 <div class="d-flex position-relative align-items-center justify-content-center">
                     <img alt="Hero Image" class="w-100 object-fit-cover" height="300" src="{{asset('assets/images/bg_hero.jpg')}}">
-                    <div class="row m-auto w-100 justify-content-md-center position-absolute">
-                        <div class="col-md-9 text-center">
+                    <div class="row m-auto h-100 w-100 justify-content-md-center position-absolute" style="background-color: rgba(41,41,41,0.51)">
+                        <div class="col-md-9 text-center m-auto">
                             <h2 class="text-white">
                                 Cari Data
                                 <span class="fw-bold">Kemiskinan & Stunting</span>
