@@ -122,9 +122,37 @@
                                             <div class="row">
                                                 <div class="form-group col-7">
                                                     <label class="form-label">Nama Lengkap</label>
-                                                    <input disabled class="form-control" value="{{$nama}}">
+                                                    <input disabled class="form-control" value="{{\App\Helper\name_convert::getName($art->nama)}}">
                                                 </div>
                                             </div>
+                                            @if($art->stuntings())
+{{--                                                {{dd($art->stuntings()->first()->stunting())}}--}}
+                                                <div class="row">
+                                                    <label class="form-label">Anggota Keluarga</label>
+                                                    <div class="container px-5 d-flex flex-column-reverse">
+                                                        @foreach($art->stuntings() as $key => $value)
+                                                            <div class="card border border-dark">
+                                                                <div class="card-body">
+                                                                    <div class="row">
+                                                                        <div class="form-group col-7">
+                                                                            <label class="form-label">Nama Lengkap</label>
+                                                                            <input disabled class="form-control" value="{{\App\Helper\name_convert::getName($value->stunting()->nama)}}">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row mt-2">
+                                                                        <div class="form-group col-2">
+                                                                            <label class="form-label">Potensi Stunting</label>
+                                                                            <div>
+                                                                                <button class="btn btn-outline-info border-top-0 border-end-0 border-start-0 border-5">Valid</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        @endforeach
+                                                    </div>
+                                                </div>
+                                            @endif
                                         @endif
                                         @if($stunting)
                                             <div class="row">
@@ -150,7 +178,7 @@
                                                 <div class="row">
                                                     <div class="form-group col-7">
                                                         <label class="form-label">Nama Lengkap</label>
-                                                        <input disabled class="form-control" value="{{$nama}}">
+                                                        <input disabled class="form-control" value="{{\App\Helper\name_convert::getName($stunting->nama)}}">
                                                     </div>
                                                 </div>
                                         @endif

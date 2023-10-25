@@ -26,7 +26,8 @@ class DatabaseSeeder extends Seeder
 //            ArtSeeder::class,
 //            BantuanSeeder::class,
 //            ArtBantuanSeeder::class,
-//            StuntingSeeder::class
+//            StuntingSeeder::class,
+//            ArtStuntingSeeder::class,
         ]);
     }
 }

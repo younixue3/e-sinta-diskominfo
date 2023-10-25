@@ -18,6 +18,11 @@ class Art extends Model
         return $this->belongsTo(ArtBantuan::class, 'id', 'id_art')->get();
     }
 
+    public function stuntings()
+    {
+        return $this->belongsTo(ArtStunting::class, 'id', 'id_art')->get();
+    }
+
     public function count_bantuan()
     {
         return $this->belongsTo(ArtBantuan::class, 'id', 'id_art')->count();
