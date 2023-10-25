@@ -17,8 +17,9 @@ class DataARTController extends Controller
 
     public function update_data($request, $id)
     {
-        $id->status_miskin = $request->status_miskin;
-        $id->save();
-        $id->ajuan()->first()->delete();
+        $art = Art::find($id);
+        $art->status_miskin = $request->status_miskin;
+        $art->save();
+        $art->ajuan()->first()->delete();
     }
 }
