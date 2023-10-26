@@ -54,7 +54,7 @@ class HomeController extends Controller
     public function show(Request $request)
     {
         $data = $this->data->get_data($request);
-        if ($data['art'] && $data['stunting']) {
+        if ($data['art'] || $data['stunting']) {
             return view('Home.HomePage', $data);
         } else {
             session()->flash('message', 'Data tidak ditemukan');
